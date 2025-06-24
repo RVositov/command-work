@@ -10,7 +10,7 @@
         </tr>
         <tr>
             <td>Menu_item_id</td>
-            <td>{{$order_item->name}}</td>
+            <td>{{$order_item->menu_item->name}}</td>
         </tr>
         <tr>
             <td>Quantity</td>
