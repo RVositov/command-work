@@ -2,22 +2,35 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Book;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Book::create([
+            'title' => 'Мир Фантазий',
+            'author' => 'Иван Петров',
+            'description' => 'Увлекательное путешествие по мирам магии и чудес.',
+            'category' => 'Фантастика',
+            'cover_image' => 'covers/fantasy.jpg',
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        Book::create([
+            'title' => 'Детектив в тени',
+            'author' => 'Анна Смирнова',
+            'description' => 'Расследование, которое перевернёт ваше представление о правде.',
+            'category' => 'Детектив',
+            'cover_image' => 'covers/detective.jpg',
+        ]);
+
+        Book::create([
+            'title' => 'История древнего мира',
+            'author' => 'Сергей Иванов',
+            'description' => 'Научный труд об античности и происхождении цивилизации.',
+            'category' => 'История',
+            'cover_image' => 'covers/history.jpg',
         ]);
     }
 }
